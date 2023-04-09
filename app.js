@@ -1,9 +1,7 @@
 import express, { json } from "express";
 import cors from "cors";
 import Stripe from "stripe";
-const stripe = new Stripe(
-  "sk_test_51IWmMKEccOkJW4g1oHUvfkxh8APttDGppAATqCSy4iaeAuLcO2sKUJ9JVQa2d9auB1gwKSpJuIEXlHnCUuwZ3rzE000KR004Xe"
-);
+const stripe = new Stripe(process.env.STRIPE_KEY);
 
 const app = express();
 
